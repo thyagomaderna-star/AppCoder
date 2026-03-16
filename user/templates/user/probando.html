@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando</title>
+
+</head>
+<body>
+    <h1>Hola {{ nom }} {{ ap }}</h1>
+    <ul>
+        {% for nota in notas %} {% if nota < 4 %}
+        <li style="color: red">{{ nota }}</li>
+        {% else %}
+        <li style="color:blue">{{ nota }}</li>
+        {% endif %} {% endfor %}
+    </ul>
+</body>
+</html>
