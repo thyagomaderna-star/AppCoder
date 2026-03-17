@@ -4,6 +4,8 @@ from django.shortcuts import render
 from .models import Curso
 from .forms import CursoFormulario, BusquedaCursoFormulario
 
+
+# * Ejemplo de CARGA DE TEMPLATE MANUAL
 def inicio(request):
     template = loader.get_template("user/inicio.html")
     return HttpResponse(template.render())
