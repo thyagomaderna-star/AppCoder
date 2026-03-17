@@ -9,7 +9,7 @@
 
   <div class="page-header">
     <h1 class="page-header__title">Página de Cursos</h1>
-    
+    <a href="{% url 'cursoFormulario' %}" class="btn">Agregar Curso</a>
   </div>
   <div class="container">
   <div class="card">
@@ -23,7 +23,10 @@
       <li class="card__list-item">
         <strong>{{ curso.nombre }}</strong> - Camada: {{ curso.camada }}
       </li>
-      {% empty %}
+      {% comment %}
+      El empty se utiliza para que la lista de cursos quede más limpia visualmente
+      {% endcomment %}
+      {% empty %} 
       <li class="card__list-item">No hay cursos disponibles.</li>
       {% endfor %}
     <div class="card__footer">
